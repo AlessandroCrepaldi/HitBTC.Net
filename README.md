@@ -113,10 +113,11 @@ To get started we have to add the HitBTC.Net namespace:  `using HitBTC.Net;`.
 ## Release notes
 * Version 1.0.1.4 - 17 july 2020
 	* Release version 1.0.1.4
-### Examples
-## Socket
+	
+## Examples
+### Socket
 
-[code]
+```
 var socketApi = new HitBTCSocketClient();
 Console.WriteLine("Waiting...");
 
@@ -129,4 +130,4 @@ socketApi.SubscribeMarginReports(
 while (Console.Read() == -1) ;
 
 await socketApi.UnsubscribeAllAsync();
-[/code]
+```
