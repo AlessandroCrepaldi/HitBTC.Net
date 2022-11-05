@@ -123,10 +123,6 @@ Console.WriteLine("Waiting...");
 
 socketApi.SubscribeOrderBook("BTCUSD", (o) => { Console.WriteLine($"{o.Timestamp.ToShortTimeString()} > {o.Ask.First().Price} | {o.Bid.First().Price}"); });
 
-socketApi.SubscribeMarginReports( 
-        (order) => { Console.WriteLine($"{order.Symbol}"); }
-       ,(acct) => { Console.WriteLine($"{acct.ReportReason}, {acct.Position}"); });
-
 while (Console.Read() == -1) ;
 
 await socketApi.UnsubscribeAllAsync();
